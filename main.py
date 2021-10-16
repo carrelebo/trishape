@@ -1,10 +1,13 @@
+#application développer par Benstitou Sofiane (carrelebo)
+
+#sur chaque fichier, il faut spécifier leurs dépendences aux modules local précis
+
 import math
 import time
 
 print("""
 Bievenue sur l'application console tripshape-flushed,
 l'application qui est faites pour faire des calculs avec des triangles
-(ne prend seulement en compte les variable entière "int")
 
 """)
 
@@ -15,15 +18,16 @@ def perimetre():
     print("")
 
     let1 = str(input("domme moi la lettre du premier point du triangle (en majuscule) : "))
+    if let1 != int:
+        print("hello world")
+
     let2 = str(input("donne moi la lettre du deuxième point du triangle (en majuscule) : "))
     let3 = str(input("donne moi la lettre du troisième point du triangle (en majuscule) : "))
 
     print("""
     """)
     
-    m_seg1 = input("combien mesure le segment [" + str(let1) + str(let2) + "] ? : ")
-    if m_seg1 != int:
-        print ("veuillez entré un nombre entier et non une lettre ou autres caractère")
+    m_seg1 = float(input("combien mesure le segment [" + str(let1) + str(let2) + "] ? : "))
 
     m_seg2 = int(input("combien mesure le segment [" + str(let1) + str(let3) + "] ? : "))
 
