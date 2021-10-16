@@ -18,16 +18,17 @@ def perimetre():
     let2 = str(input("donne moi la lettre du deuxième point du triangle (en majuscule) : "))
     let3 = str(input("donne moi la lettre du troisième point du triangle (en majuscule) : "))
 
-    triangle = let1, let2, let3
-
     print("""
     """)
     
-    m_seg1 = int(input("combien mesure le segment [" + str(let1) + str(let2) + "] ? : "))
+    m_seg1 = input("combien mesure le segment [" + str(let1) + str(let2) + "] ? : ")
+    if m_seg1 != int:
+        print ("veuillez entré un nombre entier et non une lettre ou autres caractère")
+
     m_seg2 = int(input("combien mesure le segment [" + str(let1) + str(let3) + "] ? : "))
+
     m_seg3 = int(input("combien mesure le segment [" + str(let2) + str(let3) + "] ? : "))
 
-    allm = m_seg1, m_seg2, m_seg3
     add_allm = m_seg1 + m_seg2 + m_seg3
 
     print("")
@@ -36,3 +37,9 @@ def perimetre():
     print("")
 
 perimetre()
+
+def screenon():
+    time.sleep(5)
+    screenon()
+
+screenon()
