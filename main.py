@@ -4,6 +4,7 @@
 
 import math
 import time
+from tmp import peritest
 
 print("""
 Bievenue sur l'application console tripshape-flushed,
@@ -40,7 +41,7 @@ def perimetre():
 
     print("")
 
-perimetre()
+peritest()
 
 def screenon():
     time.sleep(5)
