@@ -22,21 +22,33 @@ def let3fon():
 
 def mseg1fon():
     global m_segchoice1
-    m_seg1 = float(input("Combien mesure le segment [" + str(letchoice1) + str(letchoice2) + "] ? : "))
-    m_segchoice1 = m_seg1
+    try:
+        m_seg1 = float(input("Combien mesure le segment [" + str(letchoice1) + str(letchoice2) + "] ? : "))
+        m_segchoice1 = m_seg1
+    except ValueError:
+        print("Veuillez entrer un nombre !")
+        mseg1fon()
 
 def mseg2fon():
-    global m_segchoice2
-    m_seg2 = float(input("Combien mesure le segment [" + str(letchoice1) + str(letchoice3) + "] ? : "))
-    m_segchoice2 = m_seg2
+    try:
+        global m_segchoice2
+        m_seg2 = float(input("Combien mesure le segment [" + str(letchoice1) + str(letchoice3) + "] ? : "))
+        m_segchoice2 = m_seg2
+    except ValueError:
+        print("Veuillez entrer un nombre !")
+        mseg2fon()
 
 def mseg3fon():
-    global m_segchoice3
-    m_seg3 = float(input("Combien mesure le segment [" + str(letchoice2) + str(letchoice3) + "] ? : "))
-    m_segchoice3 = m_seg3
+    try:
+        global m_segchoice3
+        m_seg3 = float(input("Combien mesure le segment [" + str(letchoice2) + str(letchoice3) + "] ? : "))
+        m_segchoice3 = m_seg3
+    except ValueError:
+        print("Veuillez entrer un nombre !")
+        mseg3fon()
 
 def special_perimetre():
-    sigma_allm = m_segchoice1 + m_segchoice2 + m_segchoice3
+    sigma_allm = float(m_segchoice1) + float(m_segchoice2) + float(m_segchoice3)
     
     print("Le trangle " + str(letchoice1) + str(letchoice2) + str(letchoice3) + " qui a pour segements [" + str(letchoice1) + str(letchoice2) + "]" +"[" + str(letchoice1)
      + str(letchoice3) + "]" +"[" + str(letchoice2) + str(letchoice3) + "] " + "à un périmètre de " + str(sigma_allm) + str(unitychoice) + " :)")
