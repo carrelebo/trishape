@@ -1,4 +1,5 @@
 #list des praincipales fonctions utiliser pour compacter le code à un très grand niveau ! :)
+from math import *
 
 def unityfon():
     global unitychoice
@@ -53,6 +54,16 @@ def special_perimetre():
     print("Le trangle " + str(letchoice1) + str(letchoice2) + str(letchoice3) + " qui a pour segements [" + str(letchoice1) + str(letchoice2) + "]" +"[" + str(letchoice1)
      + str(letchoice3) + "]" +"[" + str(letchoice2) + str(letchoice3) + "] " + "à un périmètre de " + str(sigma_allm) + str(unitychoice) + " :)")
 
+def special_pythagore():
+    if m_segchoice1 == sqrt(m_segchoice2**2 + m_segchoice3**2):
+        print("d'après le théorème de pythagore, le triangle est rectangle")
+    if m_segchoice2 == sqrt(m_segchoice1**2 + m_segchoice3**2):
+        print("d'après le théorème de pythagore, le triangle est rectangle")
+    if m_segchoice3 == sqrt(m_segchoice2**2 + m_segchoice1**2):
+        print("d'après le théorème de pythagore, le triangle est rectangle")
+    else:
+        print("d'après le théorème de pythagore, le triangle n'est pas rectangle")
+
 def perimetre():
     unityfon()
 
@@ -67,4 +78,14 @@ def perimetre():
     special_perimetre()
 
 def pythagore():
-    print("fonction pythagore")
+    unityfon()
+
+    let1fon()
+    let2fon()
+    let3fon()
+
+    mseg1fon()
+    mseg2fon()
+    mseg3fon()
+
+    special_pythagore()

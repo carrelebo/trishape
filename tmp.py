@@ -3,6 +3,6 @@ import math
 import time
 import os
 
-from list_fonction import perimetrecomp
+from list_fonction import pythagore
 
-perimetrecomp()
+pythagore()
