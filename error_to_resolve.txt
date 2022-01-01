@@ -1,1 +1,2 @@
-#for m_segfon fonctions, resolve the problème of can't input float without error !
+#for m_segfon perimetre, resolve the problème of can't input float without error !
+resolve -> dumb type just replace "," by "." when you write a floating value for exemple : do not whrite "3,14" but "3.14"
